@@ -3,18 +3,28 @@ package conta
 import "fmt"
 
 type ContaBancaria struct {
-	numeroConta float64
-	nomeTitular string
-	saldo       float64
+	NumeroConta int
+	NomeTitular string
+	Saldo       float64
 }
 
-type exibirResultados interface {
-	depositar() float64
+type ExibirResultados interface {
+	Depositar(valor float64) float64
+	Sacar(valor float64) float64
 }
 
-//métodos
+// métodos
 
-func (c ContaBancaria) depositar(valor float64) {
-	c.saldo = c.saldo + valor
-	fmt.Printf("Foi depositado o valor de %f", valor)
+func (c *ContaBancaria) Depositar(valor float64) float64 {
+	c.Saldo += valor
+	fmt.Printf("Foi depositado o valor de R$%.2f\n", valor)
+	fmt.Printf("Seu saldo atual é: R$%.2f\n", c.Saldo)
+	return c.Saldo
+}
+
+func (c *ContaBancaria) Sacar(valor float64) float64 {
+	c.Saldo -= valor
+	fmt.Printf("O valor do saque foi R$%.2f\n", valor)
+	fmt.Printf("Seu saldo atual é: R$%.2f\n", c.Saldo)
+	return c.Saldo
 }
