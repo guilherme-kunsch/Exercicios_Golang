@@ -1,20 +1,39 @@
-<h1>Exercícios diagnósticos<h1><br>
-<h2>Exercícios Simples<h2>
+# Exercícios Diagnósticos
 
-Classe "Círculo": <br>
-1 - Crie uma classe "Círculo" que tenha um atributo de raio e métodos para calcular a área e o perímetro do círculo. Implemente também um método para exibir as informações do círculo (raio, área e perímetro). <br>
+## Exercícios Simples
 
-Classe "Conta Bancária": <br>
-2 - Crie uma classe "Conta Bancária" com atributos para armazenar o número da conta, o nome do titular e o saldo. Implemente métodos para depositar, sacar e exibir o saldo atual da conta. <br>
+### Classe "Círculo"
 
-Classe "Pessoa": <br>
-3 - Crie uma classe "Pessoa" com atributos para nome, idade e gênero. Implemente métodos para exibir as informações da pessoa (nome, idade e gênero) e um método para verificar se a pessoa é maior de idade (idade maior ou igual a 18). <br>
+1. **Objetivo:** Desenvolver uma classe `Círculo` com um atributo de raio.  
+   **Tarefas:**  
+   - Implemente métodos para calcular a área e o perímetro do círculo.
+   - Crie um método adicional para exibir as informações do círculo, incluindo raio, área e perímetro.
 
-Classe "Retângulo": <br>
-4 - Crie uma classe "Retângulo" com atributos para largura e altura. Implemente métodos para calcular a área e o perímetro do retângulo e um método para exibir as dimensões do retângulo.<br>
+### Classe "Conta Bancária"
 
+2. **Objetivo:** Implementar uma classe `Conta Bancária` com os seguintes atributos: número da conta, nome do titular e saldo.  
+   **Tarefas:**  
+   - Desenvolva métodos para realizar depósitos, saques e para exibir o saldo atual da conta.
 
-<h2>Exercícios Médios<h2><br>
+### Classe "Pessoa"
 
-Classe "Livro":<br>
-5 - Crie uma classe "Livro" com atributos para título, autor, ano de publicação e número de páginas. Implemente métodos para emprestar e devolver o livro, além de um método para verificar se o livro está disponível para empréstimo.
+3. **Objetivo:** Criar uma classe `Pessoa` que contenha os atributos nome, idade e gênero.  
+   **Tarefas:**  
+   - Implemente métodos para exibir as informações da pessoa.
+   - Adicione um método para verificar se a pessoa é maior de idade (idade maior ou igual a 18 anos).
+
+### Classe "Retângulo"
+
+4. **Objetivo:** Desenvolver uma classe `Retângulo` com atributos para largura e altura.  
+   **Tarefas:**  
+   - Implemente métodos para calcular a área e o perímetro do retângulo.
+   - Adicione um método para exibir as dimensões do retângulo.
+
+## Exercícios Médios
+
+### Classe "Livro"
+
+5. **Objetivo:** Criar uma classe `Livro` com os seguintes atributos: título, autor, ano de publicação e número de páginas.  
+   **Tarefas:**  
+   - Desenvolva métodos para emprestar e devolver o livro.
+   - Implemente um método para verificar a disponibilidade do livro para empréstimo.
