@@ -1,8 +1,9 @@
 package main
 
+// "pratica/conta"
 import (
-	// "pratica/conta"
-	"pratica/pessoa"
+	"fmt"
+	"pratica/retangulo"
 )
 
 func main() {
@@ -19,12 +20,22 @@ func main() {
 
 	// fmt.Println(minhaConta)
 
-	minhaPessoa := pessoa.Pessoa{
-		Nome:   "Guilherme",
-		Idade:  25,
-		Genero: "Masculino",
-	}
+	// minhaPessoa := pessoa.Pessoa{
+	// 	Nome:   "Guilherme",
+	// 	Idade:  25,
+	// 	Genero: "Masculino",
+	// }
 
-	minhaPessoa.ExibirInformacoes()
-	minhaPessoa.MaiorDeIdade()
+	// minhaPessoa.ExibirInformacoes()
+	// minhaPessoa.MaiorDeIdade()
+
+	r := retangulo.Retangulo{Altura: 10.0, Largura: 15.0}
+	area := r.Area()
+	perimetro := r.Perimetro()
+
+	fmt.Printf("Área: %.2f\n", area)
+	fmt.Printf("Perímetro: %.2f\n", perimetro)
+
+	// Chamando o método para exibir as dimensões
+	r.ExibirDimensoes()
 }

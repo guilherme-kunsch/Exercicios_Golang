@@ -8,11 +8,6 @@ type ContaBancaria struct {
 	Saldo       float64
 }
 
-type ExibirResultados interface {
-	Depositar(valor float64) float64
-	Sacar(valor float64) float64
-}
-
 // métodos
 
 func (c *ContaBancaria) Depositar(valor float64) float64 {
