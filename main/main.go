@@ -1,10 +1,11 @@
 package main
 
-// "pratica/conta"
 import (
 	"fmt"
-	"pratica/retangulo"
+	"pratica/livro"
 )
+
+// "pratica/conta"
 
 func main() {
 	// c := circulo.Circulo{Raio: 5}
@@ -29,13 +30,30 @@ func main() {
 	// minhaPessoa.ExibirInformacoes()
 	// minhaPessoa.MaiorDeIdade()
 
-	r := retangulo.Retangulo{Altura: 10.0, Largura: 15.0}
-	area := r.Area()
-	perimetro := r.Perimetro()
+	// r := retangulo.Retangulo{Altura: 10.0, Largura: 15.0}
+	// area := r.Area()
+	// perimetro := r.Perimetro()
 
-	fmt.Printf("Área: %.2f\n", area)
-	fmt.Printf("Perímetro: %.2f\n", perimetro)
+	// fmt.Printf("Área: %.2f\n", area)
+	// fmt.Printf("Perímetro: %.2f\n", perimetro)
 
-	// Chamando o método para exibir as dimensões
-	r.ExibirDimensoes()
+	// // Chamando o método para exibir as dimensões
+	// r.ExibirDimensoes()
+
+	livro1 := livro.Livro{
+		Titulo:        "O Egito",
+		Autor:         "Teste Testando",
+		AnoPublicacao: 2024,
+		NumeroPaginas: 200,
+	}
+
+	fmt.Println("O livro está disponivel?", livro1.Disponivel())
+
+	fmt.Println("O livro está disponível?", livro1.Disponivel())
+
+	livro1.Emprestar()
+
+	fmt.Println("O livro está disponível?", livro1.Disponivel())
+
+	livro1.Devolver()
 }
