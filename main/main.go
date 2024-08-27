@@ -1,7 +1,8 @@
 package main
 
 import (
-	"pratica/lampada"
+	"fmt"
+	"pratica/conta_bancaria"
 )
 
 // "pratica/conta"
@@ -62,17 +63,49 @@ func main() {
 	// livro1.Devolver()
 
 	//EXERCICIO 6
-	lamp := lampada.Lampada{
-		Voltagem: 220,
-		Potencia: 60,
-		Estado:   false,
+	// lamp := lampada.Lampada{
+	// 	Voltagem: 220,
+	// 	Potencia: 60,
+	// 	Estado:   false,
+	// }
+
+	// lamp.AlterarVoltPoten(50, 110)
+
+	// lamp.ExibirEstado()
+
+	// lamp.Ligado()
+
+	// lamp.ExibirEstado()
+
+	//EXERCÍCIO 7
+	conta1 := conta_bancaria.ContaBancaria{
+		NumeroConta: 123,
+		NomeTitular: "Teste1",
+		Saldo:       2000,
+	}
+	conta2 := conta_bancaria.ContaBancaria{
+		NumeroConta: 123,
+		NomeTitular: "Teste2",
+		Saldo:       2000,
+	}
+	conta3 := conta_bancaria.ContaBancaria{
+		NumeroConta: 123,
+		NomeTitular: "Teste3",
+		Saldo:       2000,
 	}
 
-	lamp.AlterarVoltPoten(50, 110)
+	conta1.Depositar(500.00)
+	conta1.Sacar(200.00)
 
-	lamp.ExibirEstado()
+	conta2.Depositar(100.00)
+	conta2.Sacar(700.00)
 
-	lamp.Ligado()
+	conta3.Depositar(300.00)
+	conta3.Sacar(150.00)
 
-	lamp.ExibirEstado()
+	fmt.Println("\nRelatório de Contas Bancárias:")
+	fmt.Printf("Conta: %d | Titular: %s | Saldo Atual: R$%.2f\n", conta1.ObterNumeroConta(), conta1.ObterNomeCliente(), conta1.ObterSaldo())
+	fmt.Printf("Conta: %d | Titular: %s | Saldo Atual: R$%.2f\n", conta2.ObterNumeroConta(), conta2.ObterNomeCliente(), conta2.ObterSaldo())
+	fmt.Printf("Conta: %d | Titular: %s | Saldo Atual: R$%.2f\n", conta3.ObterNumeroConta(), conta3.ObterNomeCliente(), conta3.ObterSaldo())
+
 }
