@@ -13,6 +13,7 @@ type ContaBancaria struct {
 	Indice      int
 	NumeroConta int
 	NomeCliente string
+	Cartao      Cartao
 }
 
 func NovoConta(numero int, nome string) *ContaBancaria {
@@ -66,4 +67,20 @@ func (c *ContaBancaria) ObterNumeroConta() int {
 
 func (c *ContaBancaria) ObterNomeCliente() string {
 	return c.NomeCliente
+}
+
+func (c *ContaBancaria) SaqueComCartao(NumeroCartao int, Validade string, valor float64) {
+	if c.Cartao.NumeroCartao != NumeroCartao || c.Cartao.Validade != Validade {
+		fmt.Println("Número do cartão ou validade incorretos")
+		return
+	}
+
+	if valor > c.Saldo {
+		fmt.Println("Saldo insuficiente")
+		return
+	}
+
+	c.Saldo -= valor
+	c.adicionarExtrato(-valor)
+	fmt.Printf("Saque de R$%.2f realizado com sucesso usando o cartão %d\n", valor, NumeroCartao)
 }
