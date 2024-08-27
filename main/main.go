@@ -78,34 +78,31 @@ func main() {
 	// lamp.ExibirEstado()
 
 	//EXERCÍCIO 7
-	conta1 := conta_bancaria.ContaBancaria{
-		NumeroConta: 123,
-		NomeTitular: "Teste1",
-		Saldo:       2000,
-	}
-	conta2 := conta_bancaria.ContaBancaria{
-		NumeroConta: 123,
-		NomeTitular: "Teste2",
-		Saldo:       2000,
-	}
-	conta3 := conta_bancaria.ContaBancaria{
-		NumeroConta: 123,
-		NomeTitular: "Teste3",
-		Saldo:       2000,
-	}
+	// Cria novas contas com número e nome do cliente
+	conta1 := conta_bancaria.NovoConta(1, "Alice")
+	conta2 := conta_bancaria.NovoConta(2, "Bob")
+	conta3 := conta_bancaria.NovoConta(3, "Charlie")
 
-	conta1.Depositar(500.00)
+	// Realiza operações nas contas
+	conta1.Depositar(5000.00)
 	conta1.Sacar(200.00)
 
-	conta2.Depositar(100.00)
+	conta2.Depositar(6000.00)
 	conta2.Sacar(700.00)
 
-	conta3.Depositar(300.00)
-	conta3.Sacar(150.00)
+	conta3.Depositar(700.00)
+	conta3.Sacar(7000.00)
 
+	// Exibe o relatório das contas
 	fmt.Println("\nRelatório de Contas Bancárias:")
-	fmt.Printf("Conta: %d | Titular: %s | Saldo Atual: R$%.2f\n", conta1.ObterNumeroConta(), conta1.ObterNomeCliente(), conta1.ObterSaldo())
-	fmt.Printf("Conta: %d | Titular: %s | Saldo Atual: R$%.2f\n", conta2.ObterNumeroConta(), conta2.ObterNomeCliente(), conta2.ObterSaldo())
-	fmt.Printf("Conta: %d | Titular: %s | Saldo Atual: R$%.2f\n", conta3.ObterNumeroConta(), conta3.ObterNomeCliente(), conta3.ObterSaldo())
+	fmt.Printf("Conta: %d | Titular: %s | Saldo Atual: R$%.2f\n", conta1.ObterNumeroConta(), conta1.ObterNomeCliente(), conta1.ExibirSaldo())
+	fmt.Printf("Conta: %d | Titular: %s | Saldo Atual: R$%.2f\n", conta2.ObterNumeroConta(), conta2.ObterNomeCliente(), conta2.ExibirSaldo())
+	fmt.Printf("Conta: %d | Titular: %s | Saldo Atual: R$%.2f\n", conta3.ObterNumeroConta(), conta3.ObterNomeCliente(), conta3.ExibirSaldo())
+
+	// Imprime os extratos de cada conta
+	fmt.Println("\nExtratos:")
+	conta1.ImprimirExtratos()
+	conta2.ImprimirExtratos()
+	conta3.ImprimirExtratos()
 
 }
